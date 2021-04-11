@@ -2,12 +2,37 @@ package br.ufg.inf.model.entities;
 
 import java.util.Date;
 
-public class Aluno {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="tb_aluno")
+public class Aluno {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id_aluno")
 	private Integer idAluno;
+	
+	@Column(name="dt_inicio")
 	private Date dtInicio;
+
+	@Column(name="ativo")
 	private Boolean ativo;
+	
+	@ManyToOne
+	@JoinColumn(name="id_pessoa")
 	private Pessoa pessoa;
+	
+	@ManyToOne
+	@JoinColumn(name="id_curso")
 	private Curso curso;
 
 	public Aluno() {
