@@ -2,9 +2,9 @@ package br.ufg.inf.ctrl;
 
 import java.util.List;
 
-import br.ufg.inf.aula4.ctrl.exception.AlunoException;
-import br.ufg.inf.aula4.ctrl.negocio.AlunoNegocio;
-import br.ufg.inf.aula4.model.entities.Aluno;
+import br.ufg.inf.ctrl.exception.AlunoException;
+import br.ufg.inf.ctrl.negocio.AlunoNegocio;
+import br.ufg.inf.model.entities.Aluno;
 
 public class AlunoCtrl {
 

@@ -2,10 +2,10 @@ package br.ufg.inf.ctrl;
 
 import java.util.List;
 
-import br.ufg.inf.aula4.ctrl.exception.MatriculaException;
-import br.ufg.inf.aula4.ctrl.negocio.DisciplinaNegocio;
-import br.ufg.inf.aula4.ctrl.negocio.MatriculaNegocio;
-import br.ufg.inf.aula4.model.entities.Matricula;
+import br.ufg.inf.ctrl.exception.MatriculaException;
+import br.ufg.inf.ctrl.negocio.DisciplinaNegocio;
+import br.ufg.inf.ctrl.negocio.MatriculaNegocio;
+import br.ufg.inf.model.entities.Matricula;
 
 public class MatriculaCtrl {
 

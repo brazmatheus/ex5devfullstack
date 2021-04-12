@@ -2,9 +2,9 @@ package br.ufg.inf.ctrl.negocio;
 
 import java.util.List;
 
-import br.ufg.inf.aula4.ctrl.exception.CursoException;
-import br.ufg.inf.aula4.model.dao.CursoDAO;
-import br.ufg.inf.aula4.model.entities.Curso;
+import br.ufg.inf.ctrl.exception.CursoException;
+import br.ufg.inf.model.dao.CursoDAO;
+import br.ufg.inf.model.entities.Curso;
 
 public class CursoNegocio {
 
@@ -30,9 +30,9 @@ public class CursoNegocio {
 		
 		// UPDATE
 		
-		public Curso alterar(Curso curso, String novoNome) throws CursoException {		
+		public Curso alterar(Curso curso) throws CursoException {		
 			this.validarDisciplina(curso);
-			return dao.alterar(curso, novoNome);
+			return dao.alterar(curso);
 		}
 		
 		// DELETE

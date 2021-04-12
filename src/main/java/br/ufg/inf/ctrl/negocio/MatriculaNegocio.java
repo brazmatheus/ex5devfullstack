@@ -2,9 +2,9 @@ package br.ufg.inf.ctrl.negocio;
 
 import java.util.List;
 
-import br.ufg.inf.aula4.ctrl.exception.MatriculaException;
-import br.ufg.inf.aula4.model.dao.MatriculaDAO;
-import br.ufg.inf.aula4.model.entities.Matricula;
+import br.ufg.inf.ctrl.exception.MatriculaException;
+import br.ufg.inf.model.dao.MatriculaDAO;
+import br.ufg.inf.model.entities.Matricula;
 
 public class MatriculaNegocio {
 

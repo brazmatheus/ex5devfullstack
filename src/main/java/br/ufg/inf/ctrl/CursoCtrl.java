@@ -2,10 +2,10 @@ package br.ufg.inf.ctrl;
 
 import java.util.List;
 
-import br.ufg.inf.aula4.ctrl.exception.CursoException;
-import br.ufg.inf.aula4.ctrl.exception.CursoException;
-import br.ufg.inf.aula4.ctrl.negocio.CursoNegocio;
-import br.ufg.inf.aula4.model.entities.Curso;
+import br.ufg.inf.ctrl.exception.CursoException;
+import br.ufg.inf.ctrl.exception.CursoException;
+import br.ufg.inf.ctrl.negocio.CursoNegocio;
+import br.ufg.inf.model.entities.Curso;
 
 public class CursoCtrl {
 
@@ -46,7 +46,7 @@ public class CursoCtrl {
 
 	public Curso alterar(Curso curso) {
 		try {
-			curso = negocio.alterar(curso, "Novo Nome");
+			curso = negocio.alterar(curso);
 			System.out.println("Curso alterada com sucesso: " + curso);
 		} catch (CursoException e) {
 			System.out.println("Erro ao tentar alterar curso com ID: " + curso.getIdCurso() + ".");
