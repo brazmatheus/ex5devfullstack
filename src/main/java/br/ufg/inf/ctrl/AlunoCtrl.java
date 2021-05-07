@@ -43,10 +43,10 @@ public class AlunoCtrl {
 		return aluno;
 	}
 
-	public Aluno alterar(Aluno aluno, boolean ativo) {
+	public Aluno alterar(Aluno aluno) {
 		Aluno alunoAlterado = null;
 		try {
-			alunoAlterado = negocio.alterar(aluno, ativo);
+			alunoAlterado = negocio.alterar(aluno);
 			System.out.println("Aluno alterado com sucesso: " + alunoAlterado);
 		} catch (AlunoException e) {
 			System.out.println("Erro ao tentar alterar aluno com ID: " + aluno.getIdAluno() + ".");

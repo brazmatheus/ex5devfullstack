@@ -30,9 +30,9 @@ public class AlunoNegocio {
 		
 		// UPDATE
 		
-		public Aluno alterar(Aluno aluno, boolean ativo) throws AlunoException {		
+		public Aluno alterar(Aluno aluno) throws AlunoException {		
 			this.validarAluno(aluno);
-			return dao.alterar(aluno, ativo);
+			return dao.alterar(aluno);
 		}
 		
 		// DELETE

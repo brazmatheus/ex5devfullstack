@@ -32,6 +32,8 @@ public class Matricula {
 		this.aluno = aluno;
 		this.oferta = oferta;
 	}
+	
+	public Matricula() {}
 
 	public Integer getIdMatricula() {
 		return idMatricula;
