@@ -32,13 +32,13 @@ public class Oferta implements Serializable{
 	private Professor professor;
 	
 	@ManyToOne
-	@JoinColumn(name="id_displina")
+	@JoinColumn(name="id_disciplina")
 	private Disciplina disciplina;
 	
-	@Column(name="data_incio")
+	@Column(name="dt_inicio")
 	private Date dtInicio;
 	
-	@Column(name="data_fim")
+	@Column(name="dt_fim")
 	private Date dtFim;
 	
 	@Column(name="dia")

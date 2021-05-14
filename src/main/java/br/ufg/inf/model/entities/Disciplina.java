@@ -20,7 +20,7 @@ public class Disciplina implements Serializable{
 	@Column(name="id_disciplina")
 	private Integer idDisciplina;
 	
-	@Column(name="nome_disciplina")
+	@Column(name="nm_disciplina")
 	private String nmDisciplina;
 	
 	@Column(name="carga_horaria")

@@ -55,9 +55,9 @@ public class Aplication {
 		Disciplina disc1 = new Disciplina(null, "Des. FullStack", 64);
 		Disciplina disc2 = new Disciplina(null, "LLP", 60);
 		Disciplina disc3 = new Disciplina(null, "Matem�tica", 30);
-		Disciplina disc4 = new Disciplina(1, "Ingl�s", 10);
-		Disciplina disc5 = new Disciplina(2, "L�gica", 40);
-		Disciplina disc6 = new Disciplina(3, "Matem�tica", 30);
+		Disciplina disc4 = new Disciplina(null, "Ingl�s", 10);
+		Disciplina disc5 = new Disciplina(null, "L�gica", 40);
+		Disciplina disc6 = new Disciplina(null, "Matem�tica", 30);
 		ctrl.inserir(disc1);
 		ctrl.inserir(disc2);
 		ctrl.inserir(disc3);
@@ -101,10 +101,10 @@ public class Aplication {
 		}
 		System.out.println("--------------------------------------------------");
 		/* Inserir Pessoas */
-		Pessoa pes1 = new Pessoa(null, "Luiz Martins", 12345678901l, new Date(1980, 1, 10));
-		Pessoa pes2 = new Pessoa(null, "Fulano da Silva", 99999999999l, new Date(1985, 2, 5));
-		Pessoa pes3 = new Pessoa(null, "Ciclano da Silva", 88888888888l, new Date(1980, 1, 10));
-		Pessoa pes4 = new Pessoa(null, "Beltrano da Silva", 77777777777l, new Date(1980, 1, 10));
+		Pessoa pes1 = new Pessoa(null, "Luiz Martins", 12345678901l, new Date(80, 1, 10));
+		Pessoa pes2 = new Pessoa(null, "Fulano da Silva", 99999999999l, new Date(85, 2, 5));
+		Pessoa pes3 = new Pessoa(null, "Ciclano da Silva", 88888888888l, new Date(80, 1, 10));
+		Pessoa pes4 = new Pessoa(null, "Beltrano da Silva", 77777777777l, new Date(80, 1, 10));
 
 		ctrl.inserir(pes1);
 		ctrl.inserir(pes2);
@@ -142,8 +142,8 @@ public class Aplication {
 	}
 	
 	public static void testeCrudCurso(CursoCtrl ctrl) {
-		Curso curso1 = new Curso(1, "Algebra Linear");
-		Curso curso2 = new Curso(2, "Estrutura de Dados");
+		Curso curso1 = new Curso(null, "Algebra Linear");
+		Curso curso2 = new Curso(null, "Estrutura de Dados");
 		
 		ctrl.inserir(curso1);
 		ctrl.inserir(curso2);
@@ -181,8 +181,8 @@ public class Aplication {
 			System.out.println(aluno);
 		}
 		
-		Aluno aluno1 = new Aluno(null, new Date(2021, 10, 12), true, pessoaCtrl.buscaPorId(2), cursoCtrl.buscaPorId(2));
-		Aluno aluno2 = new Aluno(null, new Date(2021, 3, 23), true, pessoaCtrl.buscaPorId(4), cursoCtrl.buscaPorId(2));
+		Aluno aluno1 = new Aluno(null, new Date(110, 10, 12), true, pessoaCtrl.buscaPorId(2), cursoCtrl.buscaPorId(2));
+		Aluno aluno2 = new Aluno(null, new Date(121, 3, 23), true, pessoaCtrl.buscaPorId(4), cursoCtrl.buscaPorId(2));
 		
 		System.out.println("--------------------------------------------------");
 		
@@ -221,8 +221,8 @@ public class Aplication {
 		}
 		System.out.println("--------------------------------------------------");
 
-		Professor prof1 = new Professor(1, pessoaCtrl.buscaPorId(1), Escolaridade.get(4));
-		Professor prof2 = new Professor(2, pessoaCtrl.buscaPorId(2), Escolaridade.get(2));
+		Professor prof1 = new Professor(null, pessoaCtrl.buscaPorId(1), Escolaridade.get(4));
+		Professor prof2 = new Professor(null, pessoaCtrl.buscaPorId(2), Escolaridade.get(2));
 
 		ctrl.inserir(prof1);
 		ctrl.inserir(prof2);
@@ -268,18 +268,18 @@ public class Aplication {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		Oferta ofe1 = new Oferta(1, professorCtrl.buscaPorId(2), disciplinaCtrl.buscaPorId(2), dt1, dt2, Dia.get(2),
+		Oferta ofe1 = new Oferta(null, professorCtrl.buscaPorId(2), disciplinaCtrl.buscaPorId(2), dt1, dt2, Dia.get(2),
 				"08:00");
 		ctrl.inserir(ofe1);
 
 		try {
 			dt1 = new SimpleDateFormat("yyyy-MM-dd").parse("2021-2-7");
-			dt2 = new SimpleDateFormat("yyyy-MM-dd").parse("2021-5-31");
+			dt2 = new SimpleDateFormat("yyyy-MM-dd").parse("2021-5-30");
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 
-		Oferta ofe2 = new Oferta(2, professorCtrl.buscaPorId(2), disciplinaCtrl.buscaPorId(6), dt1, dt2, Dia.get(6),
+		Oferta ofe2 = new Oferta(null, professorCtrl.buscaPorId(2), disciplinaCtrl.buscaPorId(6), dt1, dt2, Dia.get(6),
 				"19:00");
 		ctrl.inserir(ofe2);
 
@@ -292,13 +292,13 @@ public class Aplication {
 			System.out.println(matricula);
 		}
 		
-		Matricula matricula1 = new Matricula(1, alunoCtrl.buscaPorId(2), ofertaCtrl.buscaPorId(2));
-		Matricula matricula2 = new Matricula(2, alunoCtrl.buscaPorId(4), ofertaCtrl.buscaPorId(2));
+		Matricula matricula1 = new Matricula(null, alunoCtrl.buscaPorId(2), ofertaCtrl.buscaPorId(2));
+//		Matricula matricula2 = new Matricula(null, alunoCtrl.buscaPorId(4), ofertaCtrl.buscaPorId(2));
 		
 		System.out.println("--------------------------------------------------");
 		
 		ctrl.inserir(matricula1);
-		ctrl.inserir(matricula2);
+//		ctrl.inserir(matricula2);
 		
 		/* Buscar todos os Alunos */
 		System.out.println("Alunos Cadastrados");

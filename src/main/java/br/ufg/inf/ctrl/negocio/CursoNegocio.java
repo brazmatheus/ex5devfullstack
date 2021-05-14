@@ -12,7 +12,7 @@ public class CursoNegocio {
 		CursoDAO dao = new CursoDAO();
 	
 		public Curso inserir(Curso curso) throws CursoException {
-			this.validarDisciplina(curso);
+			this.validarCurso(curso);
 			dao.inserir(curso);
 			return curso;
 		}
@@ -31,7 +31,7 @@ public class CursoNegocio {
 		// UPDATE
 		
 		public Curso alterar(Curso curso) throws CursoException {		
-			this.validarDisciplina(curso);
+			this.validarCurso(curso);
 			return dao.alterar(curso);
 		}
 		
@@ -41,10 +41,10 @@ public class CursoNegocio {
 			dao.excluir(id);
 		}
 		
-		private void validarDisciplina(Curso curso) throws CursoException {
-			if (curso.getIdCurso() <= 0 || curso.getIdCurso() == null) {
-				throw new CursoException("Id curso está 0");
-			}
+		private void validarCurso(Curso curso) throws CursoException {
+//			if (curso.getIdCurso() <= 0 || curso.getIdCurso() == null) {
+//				throw new CursoException("Id curso está 0");
+//			}
 
 			if (curso.getNmCurso().equals("")) {
 				throw new CursoException("Nome da curso é obrigatório.");

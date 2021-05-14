@@ -24,11 +24,11 @@ public class Pessoa implements Serializable{
 	@Column(name="id_pessoa")
 	private Integer idPessoa;
 	
-	@Column(name="nome_pessoa")
+	@Column(name="nm_pessoa")
 	private String nmPessoa;
 	private Long cpf;
 	
-	@Column(name="data_nascimento")
+	@Column(name="dt_nascimento")
 	private Date dtNascimento;
 	
 	
